@@ -1,5 +1,5 @@
 FROM alpine:3.8
-MAINTAINER Stille <stille@ioiox.com>
+MAINTAINER Stille <song@sonteng.com>
 
 WORKDIR /
 ENV FRP_VERSION 0.35.1
