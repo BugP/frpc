@@ -13,7 +13,7 @@
 - Linux 服务器 docker 安装 **[内网 Linux 服务器或虚拟机]**
 
 ### 群晖NAS docker 安装
-[群晖NAS使用Docker安装配置frpc内网穿透教程](https://www.sonteng.cn/archives/26.html)
+[群晖NAS使用Docker安装配置frpc内网穿透教程](https://www.sonteng.cn/49.html)
 
 ### 群晖NAS 一键脚本安装
 [群晖NAS安装配置免费frp内网穿透教程](https://www.sonteng.cn/29.html)
@@ -72,6 +72,6 @@ docker restart frpc
 - GitHub [BugP/frpc](https://github.com/BugP/frpc)
 - Docker [BugP/frpc](https://hub.docker.com/r/bugp/frpc)
 - 原版frp项目 [fatedier/frp](https://github.com/fatedier/frp)
-- [群晖NAS使用Docker安装配置frpc内网穿透教程](https://www.sonteng.cn/archives/26.html) 
+- [群晖NAS使用Docker安装配置frpc内网穿透教程](https://www.sonteng.cn/49.html) 
 - [群晖NAS安装配置免费frp内网穿透教程](https://www.sonteng.cn/29.html)
 - [新手入门 - 详解 frp 内网穿透 frpc.ini 配置](https://www.sonteng.cn/archives/79.html)
