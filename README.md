@@ -16,7 +16,7 @@
 [群晖NAS使用Docker安装配置frpc内网穿透教程](https://www.sonteng.cn/archives/26.html)
 
 ### 群晖NAS 一键脚本安装
-[群晖NAS安装配置免费frp内网穿透教程](https://www.sonteng.cn/archives/6.html)
+[群晖NAS安装配置免费frp内网穿透教程](https://www.sonteng.cn/29.html)
 
 ### Linux 服务器 一键脚本安装
 安装
