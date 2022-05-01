@@ -1,17 +1,22 @@
 FROM alpine:3.8
-MAINTAINER Stille <song@sonteng.com>
+LABEL maintainer= "song <song@sonteng.com>"
 
+ENV VERSION 0.42.0
+ENV TZ=Asia/Shanghai
 WORKDIR /
-ENV FRP_VERSION 0.35.1
 
-RUN set -x && \
-	wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \ 
-	tar xzf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
-	cd frp_${FRP_VERSION}_linux_amd64 && \
-	mkdir /frp && \
-	mv frpc frpc.ini /frp && \
-	cd .. && \
-	rm -rf *.tar.gz frp_${FRP_VERSION}_linux_amd64
+RUN apk add --no-cache tzdata \
+    && ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime \
+    && echo ${TZ} > /etc/timezone
+
+RUN if [ "$(uname -m)" = "x86_64" ]; then export PLATFORM=amd64 ; else if [ "$(uname -m)" = "aarch64" ]; then export PLATFORM=arm64 ; fi fi \
+	&& wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v${VERSION}/frp_${VERSION}_linux_${PLATFORM}.tar.gz \
+	&& tar xzf frp_${VERSION}_linux_${PLATFORM}.tar.gz \
+	&& cd frp_${VERSION}_linux_${PLATFORM} \
+	&& mkdir /frp \
+	&& mv frpc frpc.ini /frp \
+	&& cd .. \
+	&& rm -rf *.tar.gz frp_${VERSION}_linux_${PLATFORM}
 
 VOLUME /frp
 
